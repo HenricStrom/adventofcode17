@@ -19,7 +19,7 @@ namespace AdventOfCode2017.Tests
             //2468
             var checkSum = Day2.GetChecksum(@"C:\Code\AdventOfCode2017\AdventOfCode2017\Utilities\day2test.txt");
 
-            Assert.AreEqual(18, checkSum);
+            Assert.AreEqual(9, checkSum);
         }
     }
 }

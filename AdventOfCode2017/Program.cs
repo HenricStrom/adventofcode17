@@ -10,7 +10,7 @@ namespace AdventOfCode2017
     {
         static void Main(string[] args)
         {
-            Day2.GetChecksum(@"C:\Code\AdventOfCode2017\AdventOfCode2017\Utilities\day2new.txt");
+            Day2.GetChecksum(@"C:\Code\AdventOfCode2017\AdventOfCode2017\Utilities\sheetcorrect.txt");
             Console.ReadLine();
         }
     }

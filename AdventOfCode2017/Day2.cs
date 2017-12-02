@@ -10,33 +10,42 @@ namespace AdventOfCode2017
     {
         public static int GetChecksum(string filePath)
         {
-            string[] input = System.IO.File.ReadAllLines(filePath);
+            //part1
+            var input = System.IO.File.ReadAllLines(filePath).Select(line => line.Split('\t').Select(x => int.Parse(x)));
+            var sum1 = input.Select(row => row.Max() - row.Min()).Sum();
+            Console.WriteLine(sum1);
 
-            int checkSum = 0;
+            var sum2 = 0;
 
-            foreach (var row in input)
+            var first = 0;
+            var second = 0;
+
+            //part2
+            foreach(var row in input)
             {
-                int lowestNumber = 10, highestNumber = 0;
-
-                foreach (var c in row)
+                foreach(var character in row)
                 {
-                    int value = Convert.ToInt32(Char.GetNumericValue(c));
+                    bool isdividable = false;
 
-                    if (value > highestNumber)
+                    foreach (var rest in row)
                     {
-                        highestNumber = value;
+                        if (rest != character && character % rest == 0)
+                        {
+                            isdividable = true;
+                            sum2 += character / rest;
+                            break;
+                        }
                     }
-                    if (value < lowestNumber)
+
+                    if (isdividable)
                     {
-                        lowestNumber = value;
+                        break;
                     }
                 }
-
-                checkSum += highestNumber - lowestNumber;
             }
 
-            Console.WriteLine(checkSum);
-            return checkSum;
+            Console.WriteLine(sum2);
+            return sum2;
         }
     }
 }
