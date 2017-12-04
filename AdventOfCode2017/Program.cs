@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode2017
 {
@@ -10,7 +6,7 @@ namespace AdventOfCode2017
     {
         static void Main(string[] args)
         {
-            Day2.GetChecksum(@"C:\Code\AdventOfCode2017\AdventOfCode2017\Utilities\sheetcorrect.txt");
+            Day4.GetPassPhrase(@"C:\Dev\adventofcode17\AdventOfCode2017\Utilities\day4.txt");
             Console.ReadLine();
         }
     }
