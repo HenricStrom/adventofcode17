@@ -6,7 +6,7 @@ namespace AdventOfCode2017
     {
         static void Main(string[] args)
         {
-            Day4.GetPassPhrase(@"C:\Dev\adventofcode17\AdventOfCode2017\Utilities\day4.txt");
+            Console.WriteLine(Day5.SolveMaze(@"C:\Dev\adventofcode17\AdventOfCode2017\Utilities\day5.txt"));
             Console.ReadLine();
         }
     }
